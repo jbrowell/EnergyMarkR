@@ -13,7 +13,7 @@
 #' 
 #' @import curl
 #' @export
-n2ex_price_vol_download <- function(path=paste0(get_credentials()$data_path,"n2ex_price_volume/"),
+download_n2ex_price_vol <- function(path=paste0(get_credentials()$data_path,"n2ex_price_volume/"),
                                     h=new_handle(httpauth = 1, userpwd =get_credentials()$n2ex),
                                     years = 10:(year(Sys.Date())-2000)){
   

@@ -5,7 +5,7 @@
 \title{Read n2EX Price and Volume Data}
 \usage{
 read_n2ex_price_vol(
-  path = paste0(get_credentials()$data_path, "price_volume/"),
+  path = paste0(get_credentials()$data_path, "n2ex_price_volume/"),
   years = 15:20
 )
 }

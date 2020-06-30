@@ -6,10 +6,10 @@
 #' 
 #' @return A \code{data.table} of n2ex price, volume and exchange rate.
 #' 
-#' @import readxl
+#' @importFrom  readxl read_xls
 #' @import data.table
 #' @export
-read_n2ex_price_vol <- function(path=paste0(get_credentials()$data_path,"price_volume/"),years = 15:20){
+read_n2ex_price_vol <- function(path=paste0(get_credentials()$data_path,"n2ex_price_volume/"),years = 15:20){
   
   PriceData <- data.table()
   VolData <- data.table()
