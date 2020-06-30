@@ -16,7 +16,7 @@
 #' 
 #' @import curl
 #' @import fasttime
-#' @importFrom  lubridate month
+#' @import lubridate
 #' @import data.table
 #' @export
 download_entso_e <- function(data_item=NULL,
@@ -50,7 +50,7 @@ download_entso_e <- function(data_item=NULL,
   for(L in 0:2){
     
     current_files_y_m <- regmatches(current_files,regexpr(pattern = "20[0-9]{2}_([0-9]{1,2})",current_files))
-    mod_date <- file.mtime(paste0(path,data_item,"/",current_files)) %m-% lubridate::months(L)
+    mod_date <- file.mtime(paste0(path,data_item,"/",current_files)) %m-% months(L)
     mod_y_m <- gsub(pattern = "_0",replacement = "_",format(mod_date,"%Y_%m"))
     current_files <- current_files[-which(current_files_y_m==mod_y_m)]
     
