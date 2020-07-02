@@ -10,7 +10,7 @@ Functions to download and read electricity market data for GB and Europe.
 ## Future plans
 
 - Complete n2ex data fields
-- EPEX Data products
+- EPEX data products
 - National Grid gas market data
 
 ## Acknowledgement
