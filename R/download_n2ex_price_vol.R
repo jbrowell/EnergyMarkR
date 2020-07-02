@@ -12,12 +12,18 @@
 #' year in \code{years} is updated.
 #' 
 #' @import curl
+#' @importFrom data.table year
 #' @export
 download_n2ex_price_vol <- function(path=paste0(get_credentials()$data_path,"n2ex_price_volume/"),
                                     h=new_handle(httpauth = 1, userpwd =get_credentials()$n2ex),
                                     years = 10:(year(Sys.Date())-2000)){
   
-  list.files(path)
+  ## Create directory
+  if(!dir.exists(path)){
+    dir.create(path)
+  }
+  
+  # list.files(path)
   
   for(year in years){
     
