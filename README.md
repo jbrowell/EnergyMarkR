@@ -4,6 +4,7 @@ Functions to download and read electricity market data for GB and Europe.
 
 ## Present Functionality
 
+- Initialise data storage path and credentials for supported APIs and 
 - n2ex price, volume, exchange rate and curve (auction cross) data
 - Generic functions for the ENSTO-E Transparency Platform
 
