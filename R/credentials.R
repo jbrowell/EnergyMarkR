@@ -11,7 +11,7 @@
 #' @details CURL handles sould be in format "username:password".
 #' @return Saves file "~/gb_elec_creds.Rda" containing specified credentials.
 #' @export
-make_credentials <- function(n2ex=NULL,entso_e=NULL,data_path="~/EnergyMarkR_data/"){
+make_credentials <- function(n2ex=NULL,entso_e=NULL,data_path){
   
   creds <- list(n2ex=paste0(n2ex),
                 entso_e=paste0(entso_e),
